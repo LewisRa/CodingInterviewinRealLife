@@ -47,6 +47,28 @@ for g in gt:
 Easier solution: 
 
 1. We create a dictionary and for each word in the input array, we add a key to the dictionary if the sorted version of the word doesn't already exist in the list of keys. The key then becomes the sorted version of the word, and the value for the key is an array that stores each anagram of the key. i.e. for every next word that is an anagram, we would sort the word, find the key that is equal to the sorted form, and add the original word to the list of values for the key.
+```python
+def groupAnagrams(strs):
+        hash_map = {}
+        for word in strs:
+            sortedWord = ''.join(sorted(word))
+            if sortedWord not in hash_map: 
+                hash_map[sortedWord] = [word] #(sortedKey = Key and word = Value)
+                #print(hash_map)
+            else: #(if there is word like the current word then just append new value to key)
+                hash_map[sortedWord].append(word)
+        print(hash_map)
+
+titles = ["duel","dule","speed","spede","deul","cars"]
+groupAnagrams(titles)
+```
+2. Return the values of the Hash Map, since each value will be an individual set.
+ ```python
+  final = []
+        for value in hash_map.values():
+            final.append(value)
+        return final
+```
   ``` python
 def groupAnagrams(strs):
         hash_map = {}
@@ -82,6 +104,8 @@ acrs
 
 Answer:['speed', 'spede']
   ```
+## Related Topics: Hash table
+## Similar Questions: Valid Anagram (easy), Grouped Shifted Strings(medium)
 
  - Feature # 2: Enable the user to view the top-rated movies worldwide, given that we have movie rankings available separately for different geographic regions.
 
