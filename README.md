@@ -1,13 +1,13 @@
-# CodingInterviewinRealLife
+# Netflix
 
 Netflix is the biggest video streaming platform in the world, offering movies, seasons, biographies, reality shows, and more. Their video repository is growing significantly. So the engineering team at Netflix keeps trying to find better ways to display content to their consumers.
 
 The scenario and the problems discussed in this chapter also relate to any content displaying functionality and how we can improve it.
 
-# Statement 
+## Statement 
 Let’s pretend you’re a developer on the Netflix engineering team. You are working on improving the user experience in finding content to watch. This involves the improvement of the search as well as recommendation functionality.
 
-# Features 
+## Features 
 We will need to introduce the following features to implement the improvements discussed above:
 
  - Feature # 1: We want to enable users to see relevant search results despite minor typos.
@@ -104,8 +104,8 @@ acrs
 
 Answer:['speed', 'spede']
   ```
-## Related Topics: Hash table
-## Similar Questions: Valid Anagram (easy), Grouped Shifted Strings(medium)
+### Related Topics: Hash table
+### Similar Questions: Valid Anagram (easy), Grouped Shifted Strings(medium)
 
  - Feature # 2: Enable the user to view the top-rated movies worldwide, given that we have movie rankings available separately for different geographic regions.
 
