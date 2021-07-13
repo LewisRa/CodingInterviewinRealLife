@@ -10,7 +10,7 @@ Let’s pretend you’re a developer on the Netflix engineering team. You are wo
 ## Features 
 We will need to introduce the following features to implement the improvements discussed above:
 
-### Feature #1 Group Similar Titles
+### Feature #1 Group Similar Titles (Group Anagram)
  - Feature # 1: We want to enable users to see relevant search results despite minor typos.
     - First, we need to figure out a way to individually group all the character combinations of each title. Suppose the content library contains the following titles: "duel", "dule", "speed", "spede", "deul", "cars". How would you efficiently implement a functionality so that if a user misspells speed as spede, they are shown the correct title?
 
@@ -110,7 +110,7 @@ Answer:['speed', 'spede']
 
 
 ------------------
-### Feature #2: Fetch Top Movies
+### Feature #2: Fetch Top Movies (Merge K Sorted Lists)
  - Feature # 2: Enable the user to view the top-rated movies worldwide, given that we have movie rankings available separately for different geographic regions.
 
 We need to build a criterion so the top movies from multiple countries will combine into a single list of top-rated movies. In order to scale, the content search is performed in a distributed fashion. Search results for each country are produced in separate lists. Each member of a given list is ranked by popularity, with 1 being most popular and popularity decreasing as the rank number increases.
@@ -280,6 +280,8 @@ def mergeK_county(lists): # Main function
         r.next = self.merge(l, r.next)
         return r
 ```
+### Related Topics: Linked List, Divide and Conquer, Heap
+### Similar Questions:Merge Two Sorted Lists(easy) Ugly Number II(medium)
 
 
 We’ll be given n lists that are all sorted in ascending order of popularity rank. We have to combine these lists into a single list that will be sorted by rank in ascending order, meaning from best to worst.
@@ -294,5 +296,5 @@ We’ll be given n lists that are all sorted in ascending order of popularity ra
 
 - Feature # 7: During a user session, a user often “shops” around for a program to watch. During this session, we want to let them move back and forth in the history of programs they’ve just browsed. As a developer, you can smell a stack, right? But, we also want the user to be able to directly jump to the top-ranked program from the one’s they’ve browsed.
 
-- Feature # 8: As you beta tested feature #7, a user complained that the next and previous functionality isn’t working correctly. Using their session history, we want to check if our implementation is correct or indeed buggy.
+- Feature # 8: As you beta tested feature #7, a user complained that the next and previous functionality isn’t working correctly. Using their session history, we want to check if our implementation is correct or indeed buggy.b
 
